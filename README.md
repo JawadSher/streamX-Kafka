@@ -1,20 +1,31 @@
-# streamX-KafkaStreamX-Kafka
-Overview
-StreamX-Kafka is a robust and scalable library designed to simplify the integration and management of Apache Kafka within your streaming applications. It provides a streamlined interface for producing and consuming messages, handling configurations, and managing Kafka streams efficiently.
-Features
+# StreamX-Kafka
 
-Simplified API: Intuitive methods for producing and consuming Kafka messages.
-Configuration Management: Easy setup and management of Kafka producer and consumer configurations.
-Scalability: Built to handle high-throughput streaming workloads with minimal latency.
-Error Handling: Comprehensive error handling and retry mechanisms for reliable operation.
-Extensibility: Modular design to support custom integrations and extensions.
+## Overview
 
-Installation
-To install StreamX-Kafka, use the following command:
+StreamX-Kafka is a robust, scalable library designed to simplify Apache Kafka integration in streaming applications. It offers a streamlined interface for producing and consuming messages, managing configurations, and handling Kafka streams with high efficiency.
+
+## Features
+
+-   **Simplified API**: Intuitive methods for producing and consuming Kafka messages.
+-   **Configuration Management**: Easy setup for Kafka producer and consumer configurations.
+-   **Scalability**: Optimized for high-throughput streaming with minimal latency.
+-   **Error Handling**: Comprehensive error handling and retry mechanisms.
+-   **Extensibility**: Modular design for custom integrations and extensions.
+
+## Installation
+
+Install StreamX-Kafka using npm:
+
+```bash
 npm install streamx-kafka
 
-Usage
-Below is a basic example of how to use StreamX-Kafka to produce and consume messages:
+```
+
+## Usage
+
+Here’s a basic example of producing and consuming messages with StreamX-Kafka:
+
+```javascript
 const { KafkaProducer, KafkaConsumer } = require('streamx-kafka');
 
 // Initialize producer
@@ -38,30 +49,63 @@ consumer.on('message', (message) => {
   console.log('Received:', message);
 });
 
-Requirements
+```
 
-Node.js v14 or higher
-Apache Kafka v2.8 or higher
+## Requirements
 
-Configuration
+-   Node.js v14 or higher
+-   Apache Kafka v2.8 or higher
+
+## Configuration
+
 StreamX-Kafka supports the following configuration options:
 
-bootstrapServers: Kafka broker(s) to connect to (e.g., localhost:9092).
-topic: The Kafka topic to produce to or consume from.
-groupId: Consumer group ID for message consumption (required for consumers).
-clientId: Optional client identifier for Kafka connections.
+Option
 
-Contributing
-We welcome contributions to StreamX-Kafka! To contribute:
+Description
 
-Fork the repository.
-Create a feature branch (git checkout -b feature/your-feature).
-Commit your changes (git commit -m 'Add your feature').
-Push to the branch (git push origin feature/your-feature).
-Open a pull request.
+Required
 
-Please ensure your code follows the project's coding standards and includes appropriate tests.
-License
-StreamX-Kafka is licensed under the MIT License.
-Support
-For issues, questions, or feedback, please open an issue on the GitHub repository or contact the maintainers at support@your-org.com.
+`bootstrapServers`
+
+Kafka broker(s) to connect to (e.g., `localhost:9092`)
+
+Yes
+
+`topic`
+
+Kafka topic for producing or consuming messages
+
+Yes
+
+`groupId`
+
+Consumer group ID for message consumption
+
+Yes (consumers)
+
+`clientId`
+
+Optional client identifier for Kafka connections
+
+No
+
+## Contributing
+
+We welcome contributions to StreamX-Kafka! Follow these steps to contribute:
+
+1.  Fork the repository.
+2.  Create a feature branch (`git checkout -b feature/your-feature`).
+3.  Commit your changes (`git commit -m 'Add your feature'`).
+4.  Push to the branch (`git push origin feature/your-feature`).
+5.  Open a pull request.
+
+Ensure your code adheres to the project's coding standards and includes tests.
+
+## License
+
+StreamX-Kafka is licensed under the [MIT License](https://grok.com/LICENSE).
+
+## Support
+
+For issues, questions, or feedback, please open an issue on the [GitHub repository](https://github.com/your-org/streamx-kafka) or contact us at [support@your-org.com](mailto:support@your-org.com).
